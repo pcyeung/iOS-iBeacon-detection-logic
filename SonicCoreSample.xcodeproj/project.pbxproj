@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0515BA9514ACCFB000C6000E /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0515BA9414ACCFB000C6000E /* Strings.strings */; };
+		0590573914916E6A00CFBE75 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0590573814916E6A00CFBE75 /* CoreLocation.framework */; };
+		071A3A3415AF46F0005426D2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071A3A3315AF46F0005426D2 /* AudioToolbox.framework */; };
+		071F747C15AB672E0076E1A6 /* SNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 071F747815AB672E0076E1A6 /* SNAppDelegate.m */; };
+		071F747D15AB672E0076E1A6 /* SNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 071F747A15AB672E0076E1A6 /* SNViewController.m */; };
+		0728284915A4B00700010DEA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0728284815A4B00700010DEA /* Reachability.m */; };
+		075B48EC15AEA2520020ED8B /* scifi.caf in Resources */ = {isa = PBXBuildFile; fileRef = 075B48EB15AEA2520020ED8B /* scifi.caf */; };
+		07B02F4214C4792F007A7974 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B02F4114C4792F007A7974 /* libz.dylib */; };
+		07B02F4414C4798C007A7974 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B02F4314C4798C007A7974 /* CFNetwork.framework */; };
+		07B02F4614C479B3007A7974 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B02F4514C479B3007A7974 /* SystemConfiguration.framework */; };
+		07B02F4814C479D8007A7974 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B02F4714C479D8007A7974 /* MobileCoreServices.framework */; };
+		07CDE3F917182AB100A52366 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CDE3F817182AB100A52366 /* CoreBluetooth.framework */; };
+		07CDE3FE17182DEF00A52366 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CDE3FD17182DEF00A52366 /* Default-568h@2x.png */; };
+		07D01B9B15A4ADFA002E6500 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D01B9A15A4ADFA002E6500 /* libicucore.dylib */; };
+		07FB4CEA148D07B300924116 /* demo_icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FB4CE6148D07B300924116 /* demo_icon_57.png */; };
+		07FB4CEC148D07B300924116 /* demo_icon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FB4CE7148D07B300924116 /* demo_icon_72.png */; };
+		07FB4CEE148D07B300924116 /* demo_icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FB4CE8148D07B300924116 /* demo_icon_114.png */; };
+		07FB4CF0148D07B300924116 /* demo_icon_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FB4CE9148D07B300924116 /* demo_icon_512.png */; };
+		3D8448A71475727C00305ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8448A61475727C00305ACC /* UIKit.framework */; };
+		3D8448A91475727C00305ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8448A81475727C00305ACC /* Foundation.framework */; };
+		3D8448AB1475727C00305ACC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8448AA1475727C00305ACC /* CoreGraphics.framework */; };
+		3D8448B11475727C00305ACC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D8448AF1475727C00305ACC /* InfoPlist.strings */; };
+		3D8448B31475727C00305ACC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8448B21475727C00305ACC /* main.m */; };
+		3D8449371475811600305ACC /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8449361475811600305ACC /* libstdc++.dylib */; };
+		3D84493D1475813100305ACC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D84493C1475813100305ACC /* libsqlite3.dylib */; };
+		3D84493F1475813400305ACC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D84493E1475813400305ACC /* Security.framework */; };
+		3D8449431475814700305ACC /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8449421475814700305ACC /* CoreAudio.framework */; };
+		3D8449491475821700305ACC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8449481475821700305ACC /* Accelerate.framework */; };
+		3D8449B21475828D00305ACC /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8449551475828D00305ACC /* Default-Landscape.png */; };
+		3D8449B31475828D00305ACC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8449561475828D00305ACC /* Default.png */; };
+		3D8449B41475828D00305ACC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8449571475828D00305ACC /* Default@2x.png */; };
+		3D844A1B1475865700305ACC /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D844A121475865700305ACC /* MainWindow_iPad.xib */; };
+		3D844A1D1475865700305ACC /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D844A171475865700305ACC /* MainWindow_iPhone.xib */; };
+		3DF1E06B147D494100FF5807 /* sonic_bolt.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF1E06B147D494100FF5806 /* sonic_bolt.png */; };
+		C57539311655903600B3DBE7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57539301655903600B3DBE7 /* CoreData.framework */; };
+		C920576C168B7A3100407E21 /* scifi.aiff in Resources */ = {isa = PBXBuildFile; fileRef = C920576B168B7A3100407E21 /* scifi.aiff */; };
+		C960FAD2168293240024766B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C960FAD1168293240024766B /* AVFoundation.framework */; };
+		C99BBB2B1657651700D313BF /* Sonic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99BBB2A1657651700D313BF /* Sonic.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0515BA9414ACCFB000C6000E /* Strings.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Strings.strings; sourceTree = "<group>"; };
+		0590573814916E6A00CFBE75 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		071A3A3315AF46F0005426D2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		071C95D815AB697E001AF450 /* SonicCoreSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SonicCoreSample-Prefix.pch"; sourceTree = "<group>"; };
+		071C95E115AB75BA001AF450 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		071F747715AB672E0076E1A6 /* SNAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNAppDelegate.h; path = Classes/SNAppDelegate.h; sourceTree = "<group>"; };
+		071F747815AB672E0076E1A6 /* SNAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNAppDelegate.m; path = Classes/SNAppDelegate.m; sourceTree = "<group>"; };
+		071F747915AB672E0076E1A6 /* SNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNViewController.h; path = Classes/SNViewController.h; sourceTree = "<group>"; };
+		071F747A15AB672E0076E1A6 /* SNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNViewController.m; path = Classes/SNViewController.m; sourceTree = "<group>"; };
+		0728284815A4B00700010DEA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		075B48EB15AEA2520020ED8B /* scifi.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = scifi.caf; sourceTree = "<group>"; };
+		07B02F4114C4792F007A7974 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		07B02F4314C4798C007A7974 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		07B02F4514C479B3007A7974 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		07B02F4714C479D8007A7974 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		07CDE3F817182AB100A52366 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		07CDE3FD17182DEF00A52366 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		07D01B9A15A4ADFA002E6500 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		07FB4CE6148D07B300924116 /* demo_icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo_icon_57.png; sourceTree = "<group>"; };
+		07FB4CE7148D07B300924116 /* demo_icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo_icon_72.png; sourceTree = "<group>"; };
+		07FB4CE8148D07B300924116 /* demo_icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo_icon_114.png; sourceTree = "<group>"; };
+		07FB4CE9148D07B300924116 /* demo_icon_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo_icon_512.png; sourceTree = "<group>"; };
+		3D8448A21475727C00305ACC /* SonicCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SonicCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D8448A61475727C00305ACC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3D8448A81475727C00305ACC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D8448AA1475727C00305ACC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3D8448AE1475727C00305ACC /* SonicCoreSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SonicCoreSample-Info.plist"; sourceTree = "<group>"; };
+		3D8448B01475727C00305ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D8448B21475727C00305ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		3D8449361475811600305ACC /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		3D84493C1475813100305ACC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		3D84493E1475813400305ACC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3D8449421475814700305ACC /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		3D8449481475821700305ACC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		3D8449551475828D00305ACC /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		3D8449561475828D00305ACC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3D8449571475828D00305ACC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3D844A131475865700305ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		3D844A181475865700305ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		3DF1E06B147D494100FF5806 /* sonic_bolt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sonic_bolt.png; sourceTree = "<group>"; };
+		C57539301655903600B3DBE7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C920576B168B7A3100407E21 /* scifi.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = scifi.aiff; sourceTree = "<group>"; };
+		C960FAD1168293240024766B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C99BBB2A1657651700D313BF /* Sonic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sonic.framework; path = ../../Core/Sonic.framework; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D84489F1475727C00305ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CDE3F917182AB100A52366 /* CoreBluetooth.framework in Frameworks */,
+				C960FAD2168293240024766B /* AVFoundation.framework in Frameworks */,
+				C57539311655903600B3DBE7 /* CoreData.framework in Frameworks */,
+				071A3A3415AF46F0005426D2 /* AudioToolbox.framework in Frameworks */,
+				07D01B9B15A4ADFA002E6500 /* libicucore.dylib in Frameworks */,
+				07B02F4814C479D8007A7974 /* MobileCoreServices.framework in Frameworks */,
+				07B02F4214C4792F007A7974 /* libz.dylib in Frameworks */,
+				07B02F4614C479B3007A7974 /* SystemConfiguration.framework in Frameworks */,
+				07B02F4414C4798C007A7974 /* CFNetwork.framework in Frameworks */,
+				3D8449491475821700305ACC /* Accelerate.framework in Frameworks */,
+				3D8449431475814700305ACC /* CoreAudio.framework in Frameworks */,
+				3D84493F1475813400305ACC /* Security.framework in Frameworks */,
+				3D84493D1475813100305ACC /* libsqlite3.dylib in Frameworks */,
+				3D8449371475811600305ACC /* libstdc++.dylib in Frameworks */,
+				3D8448A71475727C00305ACC /* UIKit.framework in Frameworks */,
+				3D8448A91475727C00305ACC /* Foundation.framework in Frameworks */,
+				3D8448AB1475727C00305ACC /* CoreGraphics.framework in Frameworks */,
+				0590573914916E6A00CFBE75 /* CoreLocation.framework in Frameworks */,
+				C99BBB2B1657651700D313BF /* Sonic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0728284715A4B00700010DEA /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				071C95E115AB75BA001AF450 /* Reachability.h */,
+				0728284815A4B00700010DEA /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		075B48EA15AEA2520020ED8B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C920576B168B7A3100407E21 /* scifi.aiff */,
+				075B48EB15AEA2520020ED8B /* scifi.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		09F1985419816AF800446A62 /* UI View */ = {
+			isa = PBXGroup;
+			children = (
+				3D844A111475865700305ACC /* iPad */,
+				3D844A161475865700305ACC /* iPhone */,
+			);
+			name = "UI View";
+			sourceTree = "<group>";
+		};
+		3D8448971475727C00305ACC = {
+			isa = PBXGroup;
+			children = (
+				3D8448AC1475727C00305ACC /* SonicCoreSample */,
+				3D8448A51475727C00305ACC /* Frameworks */,
+				3D8448A31475727C00305ACC /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		3D8448A31475727C00305ACC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D8448A21475727C00305ACC /* SonicCore.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D8448A51475727C00305ACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07CDE3F817182AB100A52366 /* CoreBluetooth.framework */,
+				C960FAD1168293240024766B /* AVFoundation.framework */,
+				C99BBB2A1657651700D313BF /* Sonic.framework */,
+				C57539301655903600B3DBE7 /* CoreData.framework */,
+				071A3A3315AF46F0005426D2 /* AudioToolbox.framework */,
+				3D8448AA1475727C00305ACC /* CoreGraphics.framework */,
+				07B02F4714C479D8007A7974 /* MobileCoreServices.framework */,
+				07B02F4514C479B3007A7974 /* SystemConfiguration.framework */,
+				07B02F4314C4798C007A7974 /* CFNetwork.framework */,
+				0590573814916E6A00CFBE75 /* CoreLocation.framework */,
+				3D8449481475821700305ACC /* Accelerate.framework */,
+				3D8449421475814700305ACC /* CoreAudio.framework */,
+				3D84493E1475813400305ACC /* Security.framework */,
+				3D8448A81475727C00305ACC /* Foundation.framework */,
+				3D8448A61475727C00305ACC /* UIKit.framework */,
+				3D84493C1475813100305ACC /* libsqlite3.dylib */,
+				3D8449361475811600305ACC /* libstdc++.dylib */,
+				07B02F4114C4792F007A7974 /* libz.dylib */,
+				07D01B9A15A4ADFA002E6500 /* libicucore.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D8448AC1475727C00305ACC /* SonicCoreSample */ = {
+			isa = PBXGroup;
+			children = (
+				09F1985419816AF800446A62 /* UI View */,
+				3D844A2A1475945400305ACC /* Vendors */,
+				3D84494C1475828D00305ACC /* Resources */,
+				3D8448AD1475727C00305ACC /* Supporting Files */,
+				071F747715AB672E0076E1A6 /* SNAppDelegate.h */,
+				071F747815AB672E0076E1A6 /* SNAppDelegate.m */,
+				071F747915AB672E0076E1A6 /* SNViewController.h */,
+				071F747A15AB672E0076E1A6 /* SNViewController.m */,
+			);
+			path = SonicCoreSample;
+			sourceTree = "<group>";
+		};
+		3D8448AD1475727C00305ACC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D8448AE1475727C00305ACC /* SonicCoreSample-Info.plist */,
+				3D8448AF1475727C00305ACC /* InfoPlist.strings */,
+				071C95D815AB697E001AF450 /* SonicCoreSample-Prefix.pch */,
+				3D8448B21475727C00305ACC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D84494C1475828D00305ACC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				075B48EA15AEA2520020ED8B /* Sounds */,
+				3D8449511475828D00305ACC /* Images */,
+				0515BA9414ACCFB000C6000E /* Strings.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3D8449511475828D00305ACC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3DF1E06B147D494100FF5806 /* sonic_bolt.png */,
+				3D8449541475828D00305ACC /* default */,
+				3D8449581475828D00305ACC /* icons */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		3D8449541475828D00305ACC /* default */ = {
+			isa = PBXGroup;
+			children = (
+				07CDE3FD17182DEF00A52366 /* Default-568h@2x.png */,
+				3D8449551475828D00305ACC /* Default-Landscape.png */,
+				3D8449561475828D00305ACC /* Default.png */,
+				3D8449571475828D00305ACC /* Default@2x.png */,
+			);
+			path = default;
+			sourceTree = "<group>";
+		};
+		3D8449581475828D00305ACC /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				07FB4CE6148D07B300924116 /* demo_icon_57.png */,
+				07FB4CE7148D07B300924116 /* demo_icon_72.png */,
+				07FB4CE8148D07B300924116 /* demo_icon_114.png */,
+				07FB4CE9148D07B300924116 /* demo_icon_512.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+		3D844A111475865700305ACC /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				3D844A121475865700305ACC /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			path = Classes/iPad;
+			sourceTree = "<group>";
+		};
+		3D844A161475865700305ACC /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				3D844A171475865700305ACC /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			path = Classes/iPhone;
+			sourceTree = "<group>";
+		};
+		3D844A2A1475945400305ACC /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				0728284715A4B00700010DEA /* Reachability */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D8448A11475727C00305ACC /* SonicCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D8448BA1475727C00305ACC /* Build configuration list for PBXNativeTarget "SonicCore" */;
+			buildPhases = (
+				3D84489E1475727C00305ACC /* Sources */,
+				3D84489F1475727C00305ACC /* Frameworks */,
+				3D8448A01475727C00305ACC /* Resources */,
+				0786D81F159E3443000816B3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SonicCore;
+			productName = SonicCoreSample;
+			productReference = 3D8448A21475727C00305ACC /* SonicCore.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D8448991475727C00305ACC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Sonic Notify, Inc";
+			};
+			buildConfigurationList = 3D84489C1475727C00305ACC /* Build configuration list for PBXProject "SonicCoreSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = 3D8448971475727C00305ACC;
+			productRefGroup = 3D8448A31475727C00305ACC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D8448A11475727C00305ACC /* SonicCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D8448A01475727C00305ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D8448B11475727C00305ACC /* InfoPlist.strings in Resources */,
+				3D8449B21475828D00305ACC /* Default-Landscape.png in Resources */,
+				3D8449B31475828D00305ACC /* Default.png in Resources */,
+				3D8449B41475828D00305ACC /* Default@2x.png in Resources */,
+				3D844A1B1475865700305ACC /* MainWindow_iPad.xib in Resources */,
+				3D844A1D1475865700305ACC /* MainWindow_iPhone.xib in Resources */,
+				07FB4CEA148D07B300924116 /* demo_icon_57.png in Resources */,
+				07FB4CEC148D07B300924116 /* demo_icon_72.png in Resources */,
+				07FB4CEE148D07B300924116 /* demo_icon_114.png in Resources */,
+				07FB4CF0148D07B300924116 /* demo_icon_512.png in Resources */,
+				0515BA9514ACCFB000C6000E /* Strings.strings in Resources */,
+				3DF1E06B147D494100FF5807 /* sonic_bolt.png in Resources */,
+				075B48EC15AEA2520020ED8B /* scifi.caf in Resources */,
+				C920576C168B7A3100407E21 /* scifi.aiff in Resources */,
+				07CDE3FE17182DEF00A52366 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0786D81F159E3443000816B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"    ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D84489E1475727C00305ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D8448B31475727C00305ACC /* main.m in Sources */,
+				0728284915A4B00700010DEA /* Reachability.m in Sources */,
+				071F747C15AB672E0076E1A6 /* SNAppDelegate.m in Sources */,
+				071F747D15AB672E0076E1A6 /* SNViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D8448AF1475727C00305ACC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D8448B01475727C00305ACC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D844A121475865700305ACC /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D844A131475865700305ACC /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+		3D844A171475865700305ACC /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D844A181475865700305ACC /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07FB4CE0148D020900924116 /* SonicX-AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv7,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-all_load";
+				PROVISIONING_PROFILE = "";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../sn-ios-sdk/** ../sn-ios-ui-sdk/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "SonicX-AppStore";
+		};
+		07FB4CE1148D020900924116 /* SonicX-AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../..\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../..\"/**",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SonicCoreSample/SonicCoreSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "SonicCoreSample/SonicCoreSample-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv7 armv6";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "SonicX-AppStore";
+		};
+		3D8448B81475727C00305ACC /* SonicX-Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv7,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = "-all_load";
+				PROVISIONING_PROFILE = "";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../sn-ios-sdk/** ../sn-ios-ui-sdk/**";
+			};
+			name = "SonicX-Debug";
+		};
+		3D8448B91475727C00305ACC /* SonicX-Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv7,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-all_load";
+				PROVISIONING_PROFILE = "";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../sn-ios-sdk/** ../sn-ios-ui-sdk/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "SonicX-Release";
+		};
+		3D8448BB1475727C00305ACC /* SonicX-Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../..\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../..\"/**",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SonicCoreSample/SonicCoreSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "SonicCoreSample/SonicCoreSample-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv7 armv6";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "SonicX-Debug";
+		};
+		3D8448BC1475727C00305ACC /* SonicX-Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../..\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../..\"/**",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SonicCoreSample/SonicCoreSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "SonicCoreSample/SonicCoreSample-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv7 armv6";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "SonicX-Release";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D84489C1475727C00305ACC /* Build configuration list for PBXProject "SonicCoreSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D8448B81475727C00305ACC /* SonicX-Debug */,
+				3D8448B91475727C00305ACC /* SonicX-Release */,
+				07FB4CE0148D020900924116 /* SonicX-AppStore */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "SonicX-Release";
+		};
+		3D8448BA1475727C00305ACC /* Build configuration list for PBXNativeTarget "SonicCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D8448BB1475727C00305ACC /* SonicX-Debug */,
+				3D8448BC1475727C00305ACC /* SonicX-Release */,
+				07FB4CE1148D020900924116 /* SonicX-AppStore */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "SonicX-Release";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D8448991475727C00305ACC /* Project object */;
+}

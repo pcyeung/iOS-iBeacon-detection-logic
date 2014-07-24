@@ -1,0 +1,9 @@
+/* 
+  Strings.strings
+  SNReference
+
+  Created by Alex Bell on 12/29/11.
+  Copyright (c) 2011 Sonic Notify, Inc. All rights reserved.
+*/
+
+"LocationPurposeToUser" = "This application is using course location monitoring in order to bring you the ability to interact with locations that are enabled for use with the application";
