@@ -27,6 +27,17 @@
 
 
 
+@implementation NSMutableArray (ContainsString)
+-(BOOL) containsString:(NSString*)string
+{
+	for (NSString* str in self) {
+		if ([str isEqualToString:string])
+			return YES;
+	}
+	return NO;
+}
+@end
+
 @implementation SNAppDelegate
 
 ///////////////////////////
@@ -111,11 +122,12 @@
     [self.startBtn setEnabled:false];
     _BlueThreshold = 10;    //Default bluetooth threshold time
     _AudioThreshold = 3;    //Default audio threshold time
-    _rssiThreshold = -65;   ////Default rssi threshold
+    _rssiThreshold = -63;   ////Default rssi threshold
     _blueSlider.value = _BlueThreshold;
     _audioSlider.value = _AudioThreshold;
     _blueValue.text = [NSString stringWithFormat:@"%d", (int)_blueSlider.value];
     _audioValue.text = [NSString stringWithFormat:@"%d", (int)_audioSlider.value];
+	self.HeardStack = [[NSMutableArray alloc] init];
 
 
 
@@ -303,6 +315,7 @@
     }
 }
 
+
 //////////////////////////////////////////////
 //  Determine if it should send API or not //
 //  type: AUDIO or BLUETOOTH              //
@@ -310,15 +323,27 @@
 //////////////////////////////////////////
 - (void) apiSend: (NSString *) type with_code: (NSString *) SonicHeard
 {
+	[self coolDownUpdate]; // Initialization
+
+	BOOL * tmp = false;
+	tmp = [self.HeardStack containsString:SonicHeard];
     // In audio mode, if there is no previous identical ID heard, leave function
-    if([self.HeardStack indexOfObject:SonicHeard] == NSNotFound && [type isEqualToString:@"AUDIO"])
+    if(false)//(![type isEqualToString:@"BLUETOOTH"] && tmp == NULL)
     {
+		[self.HeardStack addObject:SonicHeard];
         return;
     }
     
+	int SonicHeardInt = [SonicHeard integerValue];
+	
+	if((SonicHeardInt < 803000) ||  (SonicHeardInt > 805000))
+	{
+		LOG_OUTPUT(@"%@ is out of range(803XXX - 805XXX), drop", SonicHeard);
+		return;
+	}
+	
     int flag = 0; // 0 = False, 1 = Audio, 2 = Bluetooth
     NSDate *now = [NSDate date];
-    [self coolDownUpdate]; // Initialization
 
     // Calculate time since last API sent from different mode
     double apiCool = [now timeIntervalSinceDate:self.ApiCooldown];
@@ -460,9 +485,6 @@
         NSString *audioCode = [NSString stringWithFormat:@"%ld", audioHeard.beaconCode]; //String value for heard ID
         self.audioHeard.text = audioCode;
 
-        // Add ID to the heard stack
-        [self.HeardStack addObject:audioCode];
-        
         // Go and check for cooldown time
         [self apiSend:@"AUDIO" with_code:audioCode];
 
@@ -475,7 +497,65 @@
     return YES;
 }
 
+- (void)sonic:(Sonic *)sonic didGeoFencesUpdated:(NSArray *)locations
+{
+	LOG_OUTPUT(@"Geo Fence Updated");
+}
 
+
+- (void)sonic:(Sonic *)sonic didGeoFenceEntered:(SonicLocation *)location
+{
+	LOG_OUTPUT(@"Geo Fence Entered");
+	
+	UIApplicationState state = [[UIApplication sharedApplication] applicationState];
+	if(true)// (state != UIApplicationStateActive)
+	{
+		NSDate *now = [NSDate new];
+		UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+		localNotif.fireDate = now;
+		
+		localNotif.timeZone=[NSTimeZone defaultTimeZone];
+		localNotif.alertBody = [NSString stringWithFormat: @"You are now entering a Geo Fence"];
+		localNotif.soundName = UILocalNotificationDefaultSoundName;
+		
+		localNotif.alertAction = NSLocalizedString(@"View Details", nil);
+		localNotif.hasAction = YES; //是否显示额外的按钮，为no时alertAction消失
+		
+		
+		localNotif.applicationIconBadgeNumber = 0;
+		[[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+	}
+	[[Sonic sharedInstance] startListening];
+
+	
+}
+
+- (void)sonic:(Sonic *)sonic didGeoFenceExited:(SonicLocation *)location
+{
+	LOG_OUTPUT(@"Geo Fence Exited");
+	
+	UIApplicationState state = [[UIApplication sharedApplication] applicationState];
+	if(TRUE)// (state != UIApplicationStateActive)
+	{
+		NSDate *now = [NSDate new];
+		UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+		localNotif.fireDate = now;
+		
+		localNotif.timeZone=[NSTimeZone defaultTimeZone];
+		localNotif.alertBody = [NSString stringWithFormat: @"You are now exiting a Geo Fence"];
+		localNotif.soundName = UILocalNotificationDefaultSoundName;
+		
+		localNotif.alertAction = NSLocalizedString(@"View Details", nil);
+		localNotif.hasAction = YES; //是否显示额外的按钮，为no时alertAction消失
+		
+		
+		localNotif.applicationIconBadgeNumber = 0;
+		[[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+	}
+	[[Sonic sharedInstance] startListening];
+
+	
+}
 
 /**
  * Did receive activations is called after URL#sonic:didHearCode:withTimeInterval returns YES.
