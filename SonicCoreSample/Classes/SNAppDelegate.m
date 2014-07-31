@@ -154,6 +154,19 @@
     [[Sonic sharedInstance] stopListening];
 }
 
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+	[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+	[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+
+}
+
+
+
 /**
 * Cleanup the window and remove appropriate references, etc
 */ 
